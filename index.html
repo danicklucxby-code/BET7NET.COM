@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BET7NET</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header><h1>⚡ BET7NET</h1><a class="nav" href="live.html">📺 Ao vivo</a><div id="top" class="hide"><span id="who" class="mu"></span> · <span class="bal" id="bal"></span> <button class="g s" onclick="auth.signOut()">Sair</button></div></header>
+
+<!-- LOGIN -->
+<div id="authv" class="card">
+  <h2 id="atitle">Entrar</h2>
+  <input id="nm" class="hide" placeholder="Seu nome">
+  <input id="em" type="email" placeholder="E-mail">
+  <input id="pw" type="password" placeholder="Senha (mín. 6)">
+  <button onclick="doAuth()" style="width:100%;margin-top:8px">Continuar</button>
+  <p class="mu" style="text-align:center;cursor:pointer" onclick="toggleAuth()" id="alink">Não tem conta? Criar conta</p>
+  <p class="mu" style="text-align:center">Jogo fictício com moedas de mentira 🎮</p>
+</div>
+
+<!-- APP -->
+<div id="app" class="hide">
+  <div class="tabs" id="tabs"></div>
+  <div id="t-rank"></div>
+  <div id="t-bet" class="hide"></div>
+  <div id="t-mine" class="hide"></div>
+  <div id="t-adm" class="hide"></div>
+</div>
+</div>
+<div id="msg"></div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
